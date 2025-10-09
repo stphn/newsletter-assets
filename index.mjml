@@ -34,7 +34,7 @@
 
   </mj-section>
     <!-- Introduction Text -->
-    <mj-section background-color="#fafafa"></mj-section>
+    <mj-section background-color="#fafafa"></mj-section>	
     <!-- 2 columns section -->
     <mj-section background-color="white"></mj-section>
     <!-- Icons -->
