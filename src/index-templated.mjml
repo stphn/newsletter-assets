@@ -1,0 +1,17 @@
+<mjml>
+  <mj-head>
+    <mj-include path="./components/styles.mjml" />
+    <mj-breakpoint width="320px" />
+    <mj-preview>Hello MJML</mj-preview>
+  </mj-head>
+  <mj-body background-color="#3CEDB9">
+    <!-- Test comment to trigger watcher -->
+    <mj-wrapper padding="30px 0">
+      <mj-include path="./components/hesader.mjml" />
+      <mj-include path="./components/hero.mjml" />
+      <mj-include path="./components/article.mjml" />
+      <mj-include path="./components/article.umjml" />
+      <mj-include path="./components/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>

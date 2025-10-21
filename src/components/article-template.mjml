@@ -1,0 +1,14 @@
+<!-- Flexible Article Component -->
+<!-- Usage: Pass variables like title, image, content, etc. -->
+<mj-section mj-class="sections">
+  <mj-column background-color="#E4E7DB">
+    <mj-text mj-class="headline">{{ title }}</mj-text>
+    <mj-image alt="{{ imageAlt }}" src="{{ imageSrc }}" />
+    <mj-text mj-class="body-text">{{ content1 }}</mj-text>
+    <mj-text mj-class="body-text">{{ content2 }}</mj-text>
+    <mj-text mj-class="body-text">
+      👉 {{ ctaText }}:
+      <a href="{{ ctaUrl }}">{{ ctaLabel }}</a>
+    </mj-text>
+  </mj-column>
+</mj-section>

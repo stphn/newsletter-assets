@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MJML Newsletter Framework</title>
+    <link rel="stylesheet" href="/templates/shared.css" />
+    <style>
+      body {
+        text-align: center;
+      }
+      .build-section {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border: 1px solid #e9ecef;
+      }
+      .build-section h3 {
+        margin-top: 0;
+      }
+      .help-text {
+        margin-top: 1rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .preview-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e1e5e9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><span class="icon">󰇮</span> MJML Newsletter Framework</h1>
+        <p>Ready to build your newsletters!</p>
+      </div>
+
+      <div class="build-section">
+        <h3>No newsletters found</h3>
+        <p>Build your first newsletter with one of these commands:</p>
+
+        <button class="copy-btn" onclick="copyToClipboard('pnpm run build:mjml', this)">
+          <span class="icon">󰆏</span> Copy Build Command
+        </button>
+
+        <button class="copy-btn" onclick="copyToClipboard('pnpm dev', this)">
+          <span class="icon">󰑓</span> Copy Dev Command
+        </button>
+
+        <div class="help-text">
+          <strong>build:mjml</strong> - Compile MJML files to HTML<br />
+          <strong>dev</strong> - Start development with auto-rebuild
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/@vite/client"></script>
+    <script>
+      function copyToClipboard(text, button) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            const originalText = button.innerHTML
+            button.innerHTML = '<span class="icon">󰄬</span> Copied!'
+            button.classList.add('copied')
+            setTimeout(() => {
+              button.innerHTML = originalText
+              button.classList.remove('copied')
+            }, 2000)
+          })
+          .catch(() => {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea')
+            textArea.value = text
+            document.body.appendChild(textArea)
+            textArea.select()
+            document.execCommand('copy')
+            document.body.removeChild(textArea)
+
+            const originalText = button.innerHTML
+            button.innerHTML = '<span class="icon">󰄬</span> Copied!'
+            button.classList.add('copied')
+            setTimeout(() => {
+              button.innerHTML = originalText
+              button.classList.remove('copied')
+            }, 2000)
+          })
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "name": "MJML Newsletter Framework",
+  "version": "1.0.0",
+  "description": "Modern MJML framework with build tools and export functionality",
+
+  "paths": {
+    "src": "src",
+    "components": "components",
+    "dist": "dist",
+    "exports": "exports",
+    "assets": "assets"
+  },
+
+  "build": {
+    "includePaths": ["src/**/*.mjml", "*.mjml"],
+    "excludePaths": ["node_modules/**/*.mjml"],
+    "outputFormat": "html",
+    "minify": false
+  },
+
+  "exports": {
+    "html": {
+      "addMetaTags": true,
+      "optimize": true,
+      "directory": "exports/html"
+    },
+    "outlook": {
+      "addMSOSupport": true,
+      "optimizeVML": true,
+      "fallbackFonts": true,
+      "directory": "exports/outlook"
+    },
+    "tar": {
+      "compression": "gzip",
+      "level": 9,
+      "includeSource": true,
+      "directory": "exports/archives"
+    }
+  },
+
+  "development": {
+    "watch": true,
+    "port": 3000,
+    "liveReload": true,
+    "autoOpen": true
+  },
+
+  "mjml": {
+    "options": {
+      "keepComments": false,
+      "beautify": true,
+      "minify": false,
+      "validationLevel": "strict"
+    }
+  }
+}

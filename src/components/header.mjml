@@ -1,0 +1,15 @@
+<!-- Header -->
+<mj-section background-color="#F8FAF3" mj-class="sections" padding="8px" css-class="dark-bg dark-border">
+  <mj-column width="100%">
+    <mj-table css-class="header-table">
+      <tr>
+        <td style="width: 60%; vertical-align: middle;" class="header-logo">
+          <img src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo.png" width="226" style="display: block; max-width: 226px; height: auto;" alt="">
+        </td>
+        <td style="width: 40%; vertical-align: middle; text-align: right; font-family: Montserrat, Arial, sans-serif; font-size: 13px; color: #2D2D2F;" class="header-text dark-text">
+          Connected & Engaged
+        </td>
+      </tr>
+    </mj-table>
+  </mj-column>
+</mj-section>

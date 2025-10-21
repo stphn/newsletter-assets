@@ -1,0 +1,8 @@
+<!-- Hero Section -->
+<mj-section mj-class="sections" padding="8px" css-class="dark-bg dark-border">
+  <mj-column>
+    <mj-text align="center" font-size="60px" line-height="1.2" font-weight="700" css-class="dark-text">
+      Top Digital Moments You Shouldn't Miss
+    </mj-text>
+  </mj-column>
+</mj-section>
