@@ -3,12 +3,53 @@ import path from 'path'
 import { glob } from 'glob'
 import chalk from 'chalk'
 import ora from 'ora'
+import { buildMJML } from './build-mjml.js'
 
 const spinner = ora('Creating Outlook templates...').start()
+
+function injectMobileClasses(html) {
+  let modified = html
+
+  // Inject class for article section outer TD (has border and padding)
+  // This targets the section TD that wraps the beige column
+  modified = modified.replace(
+    /(<td[^>]*style="[^"]*border:4px solid #2D2D2F[^"]*padding:8px[^"]*"[^>]*)(>)/gi,
+    (match, tdOpen, closing) => {
+      // Check if class attribute already exists
+      if (tdOpen.includes('class="')) {
+        // Add to existing class
+        return tdOpen.replace(/class="([^"]*)"/, 'class="$1 article-outer"') + closing
+      } else {
+        // Add new class attribute
+        return tdOpen + ' class="article-outer"' + closing
+      }
+    }
+  )
+
+  // Inject class for article column inner TD (beige background)
+  modified = modified.replace(
+    /(<td[^>]*style="[^"]*background-color:#E4E7DB[^"]*"[^>]*)(>)/gi,
+    (match, tdOpen, closing) => {
+      // Check if class attribute already exists
+      if (tdOpen.includes('class="')) {
+        // Add to existing class
+        return tdOpen.replace(/class="([^"]*)"/, 'class="$1 article-inner"') + closing
+      } else {
+        // Add new class attribute
+        return tdOpen + ' class="article-inner"' + closing
+      }
+    }
+  )
+
+  return modified
+}
 
 function optimizeForOutlook(html) {
   // Outlook-specific optimizations
   let optimized = html
+
+  // First inject mobile utility classes
+  optimized = injectMobileClasses(optimized)
 
   // Add Outlook conditional comments
   optimized = optimized.replace(
@@ -104,13 +145,49 @@ ${html}
 }
 
 function createOutlookMacTemplate(html, templateName) {
-  // For Mac, just return clean HTML - Outlook Mac handles templating differently
-  // The metadata in your sample might be added by Outlook Mac when saving
-  return html
+  // Create proper .emltpl format for Outlook Mac with MIME headers
+  const timestamp = new Date().toUTCString()
+
+  return `Date: ${timestamp}
+From: newsletter@example.com
+Message-ID: <${Date.now()}@newsletter.local>
+Subject: ${templateName}
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+    boundary="----Mixed_${Date.now()}_1"
+
+------Mixed_${Date.now()}_1
+Content-Type: multipart/related;
+    boundary="----Related_${Date.now()}_2"
+
+------Related_${Date.now()}_2
+Content-Type: multipart/alternative;
+    boundary="----Alternative_${Date.now()}_3"
+
+------Alternative_${Date.now()}_3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+${html}
+
+------Alternative_${Date.now()}_3--
+------Related_${Date.now()}_2--
+------Mixed_${Date.now()}_1--`
 }
 
 async function exportOutlook() {
   try {
+    // Ensure we're in the project root
+    const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
+    process.chdir(projectRoot)
+
+    // First build MJML files
+    spinner.stop()
+    await buildMJML()
+
+    // Restart spinner for export
+    spinner.start('Creating Outlook templates...')
+
     // Ensure exports directory exists
     await fs.ensureDir('exports/outlook')
 

@@ -6,33 +6,47 @@
   <mj-text align="left" color="#2D2D2F" font-family="Montserrat, Arial, sans-serif" />
   <mj-button font-family="Montserrat, Arial, sans-serif" />
   <mj-section background-color="#fff" />
-  <mj-class name="sections" border="4px solid #2D2D2F" border-bottom="0" padding="32px" />
-  <mj-class name="footer" border-bottom="4px solid #2D2D2F" padding="8px" />
-  <mj-class name="headline" font-size="32px" line-height="1.4" padding="18px" />
+  <mj-class name="section-border" border="4px solid #2D2D2F" border-bottom="0" />
+  <mj-class name="footer" border="4px solid #2D2D2F" padding="8px" />
+  <mj-class name="headline" font-size="32px" line-height="1.4" />
   <mj-class name="body-text" font-size="16px" line-height="1.4" />
 </mj-attributes>
 <mj-style inline="inline">
   a { color: #2D2D2F !important; } a:hover { color: #000 !important; }
 </mj-style>
+<!--[if !mso]><!-->
 <mj-style>
-  /* Mobile responsive header */
-  @media only screen and (max-width: 480px) {
-    .header-table table {
-      width: 100% !important;
+  /* Hide dark logo by default (light mode) */
+  .logo-dark {
+    display: none !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+</mj-style>
+<mj-style>
+  /* Mobile responsive - use simple class selectors only */
+  @media only screen and (max-width: 619px) {
+    /* Remove wrapper padding on mobile */
+    .main-wrapper > table > tbody > tr > td {
+      padding: 0 !important;
     }
-    .header-logo, .header-text {
-      display: block !important;
-      width: 100% !important;
-      text-align: center !important;
+
+    /* Article outer - remove side padding and borders */
+    .article-outer {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
     }
-    .header-logo img {
-      margin: 0 auto !important;
-    }
-    .header-text {
-      padding-top: 10px !important;
+
+    /* Article inner - keep same padding on mobile */
+    .article-inner {
+      padding: 8px !important;
     }
   }
-
+</mj-style>
+<!--<![endif]-->
+<mj-style>
   /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     body {
@@ -46,6 +60,16 @@
     }
     .dark-border {
       border-color: #F8FAF3 !important;
+    }
+    /* Hide light logo in dark mode, show dark logo */
+    .logo-light {
+      display: none !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+    }
+    .logo-dark {
+      display: block !important;
+      max-height: none !important;
     }
     a {
       color: #3CEDB9 !important;

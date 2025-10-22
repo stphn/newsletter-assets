@@ -13,7 +13,9 @@ async function buildMJML() {
     await fs.ensureDir('dist')
 
     // Find all MJML files, excluding components directory
-    let mjmlFiles = await glob(['src/**/*.mjml', '*.mjml', '!node_modules/**/*.mjml'])
+    let mjmlFiles = await glob(['src/**/*.mjml', '*.mjml', '!node_modules/**/*.mjml'], {
+      cwd: process.cwd()
+    })
 
     // Filter out component files
     mjmlFiles = mjmlFiles.filter((file) => !file.includes('/components/'))
@@ -28,6 +30,10 @@ async function buildMJML() {
         const { html, errors } = mjml2html(mjmlContent, {
           filePath: file,
           actualPath: path.dirname(file),
+          minify: false,
+          fonts: {
+            'Montserrat': 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap'
+          }
         })
 
         if (errors.length > 0) {

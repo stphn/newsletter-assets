@@ -1,22 +1,24 @@
 <!-- Article Section -->
-<mj-section mj-class="sections" css-class="dark-bg dark-border">
-  <mj-column background-color="#E4E7DB" css-class="dark-bg">
-    <mj-text mj-class="headline" css-class="dark-text">
+<mj-section mj-class="section-border" padding="8px" css-class="dark-bg dark-border">
+  <mj-column background-color="#E4E7DB" css-class="dark-bg" padding="8px">
+    <mj-text mj-class="headline" css-class="dark-text" padding="0 0 18px 0">
       👾 Game On: JUICY vs. BOUNCY [REFRESH TEST nttsratrsgmtn grtnisraeniti]
     </mj-text>
     <mj-image
       alt="JUICY vs. BOUNCY"
       src="https://s1.designmodo.com/postcards/essence-jelly-vs-bouncy-game-background-0825_2-185656c0.png"
+      padding="0 0 20px 0"
     />
-    <mj-text mj-class="body-text" css-class="dark-text">
+    <mj-include path="./person.mjml" />
+    <mj-text mj-class="body-text" css-class="dark-text" padding="0">
       Our latest campaign btrstarrings not only color but also action: Juicy vs. Bouncy! On our
       microsite you'll find an interactive Pong-inspired mini game designed to engage our Gen Z
       community.
     </mj-text>
-    <mj-text mj-class="body-text" css-class="dark-text">
+    <mj-text mj-class="body-text" css-class="dark-text" padding="0">
       Choose your team, test your skills, and decide who takes the crown in the end
     </mj-text>
-    <mj-text mj-class="body-text" css-class="dark-text">
+    <mj-text mj-class="body-text" css-class="dark-text" padding="0">
       👉 Play now:
       <a href="https://example.com/juicy-vs-bouncy">JUICY vs. BOUNCY</a>
     </mj-text>

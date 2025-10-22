@@ -1,3 +1,23 @@
+Date: Wed, 22 Oct 2025 07:10:14 GMT
+From: newsletter@example.com
+Message-ID: <1761117014705@newsletter.local>
+Subject: index-templated
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+    boundary="----Mixed_1761117014705_1"
+
+------Mixed_1761117014705_1
+Content-Type: multipart/related;
+    boundary="----Related_1761117014705_2"
+
+------Related_1761117014705_2
+Content-Type: multipart/alternative;
+    boundary="----Alternative_1761117014705_3"
+
+------Alternative_1761117014705_3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
 <!doctype html>
 <html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
@@ -40,23 +60,25 @@
     <![endif]-->
     
       <!--[if !mso]><!-->
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" type="text/css">
         <style type="text/css">
-          @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap);
+          @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap);
         </style>
       <!--<![endif]-->
 
     
     
     <style type="text/css">
-      @media only screen and (min-width:320px) {
+      @media only screen and (min-width:620px) {
         .mj-column-per-100 { width:100% !important; max-width: 100%; }
+.mj-column-per-60 { width:60% !important; max-width: 60%; }
+.mj-column-per-40 { width:40% !important; max-width: 40%; }
       }
     </style>
-    <style media="screen and (min-width:320px)">
+    <style media="screen and (min-width:620px)">
       .moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }
+.moz-text-html .mj-column-per-60 { width:60% !important; max-width: 60%; }
+.moz-text-html .mj-column-per-40 { width:40% !important; max-width: 40%; }
     </style>
     
     
@@ -64,7 +86,7 @@
     
     <style type="text/css">
 
-    @media only screen and (max-width:319px) {
+    @media only screen and (max-width:619px) {
       table.mj-full-width-mobile { width: 100% !important; }
       td.mj-full-width-mobile { width: auto !important; }
     }
@@ -72,25 +94,33 @@
     </style>
      
     <style type="text/css">
-/* Mobile responsive header */
-  @media only screen and (max-width: 480px) {
-    .header-table table {
-      width: 100% !important;
+/* Hide dark logo by default (light mode) */
+  .logo-dark {
+    display: none !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+/* Mobile responsive - use simple class selectors only */
+  @media only screen and (max-width: 619px) {
+    /* Remove wrapper padding on mobile */
+    .main-wrapper > table > tbody > tr > td {
+      padding: 0 !important;
     }
-    .header-logo, .header-text {
-      display: block !important;
-      width: 100% !important;
-      text-align: center !important;
+
+    /* Article outer - remove side padding and borders */
+    .article-outer {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
     }
-    .header-logo img {
-      margin: 0 auto !important;
-    }
-    .header-text {
-      padding-top: 10px !important;
+
+    /* Article inner - keep same padding on mobile */
+    .article-inner {
+      padding: 8px !important;
     }
   }
-
-  /* Dark mode support */
+/* Dark mode support */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #1a1a1a !important;
@@ -104,6 +134,16 @@
     .dark-border {
       border-color: #F8FAF3 !important;
     }
+    /* Hide light logo in dark mode, show dark logo */
+    .logo-light {
+      display: none !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+    }
+    .logo-dark {
+      display: block !important;
+      max-height: none !important;
+    }
     a {
       color: #3CEDB9 !important;
     }
@@ -112,7 +152,8 @@
     }
   }
     </style>
-    
+    <!--[if !mso]><!-->
+<!--<![endif]-->
     <style type="text/css">
     /* Outlook-specific styles */
     .mso-hide { mso-hide: all !important; }
@@ -139,22 +180,22 @@
       <div aria-roledescription="email" style="background-color:#3CEDB9;" role="article" lang="und" dir="auto">
         <!-- Test comment to trigger watcher -->
       
-      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="main-wrapper-outlook" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div style="margin:0px auto;max-width:600px;">
+      <div class="main-wrapper" style="margin:0px auto;max-width:600px;">
         
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
           <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;line-height:0;padding:30px 0;text-align:center;">
+              <td style="direction:ltr;font-size:0px;line-height:0;padding:20px;text-align:center;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
                   
       <!-- Header -->
-          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#F8FAF3" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:560px;" width="560" bgcolor="#F8FAF3" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div class="dark-bg dark-border" style="background:#F8FAF3;background-color:#F8FAF3;margin:0px auto;max-width:600px;">
+      <div class="dark-bg dark-border" style="background:#F8FAF3;background-color:#F8FAF3;margin:0px auto;max-width:560px;">
         
         <!--[if gte mso 9]>
 <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
@@ -168,26 +209,48 @@
 <![endif]-->
           <tbody>
             <tr>
-              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:576px;" ><![endif]-->
+              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;" class="article-outer">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:536px;" ><![endif]-->
             
-      <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;">
+        <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:321px;" ><![endif]-->
+                
+      <div class="mj-column-per-60 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:60%;">
         
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:middle;" width="100%">
         <tbody>
-          
+          <!-- Light mode logo (hidden in dark mode) -->
               <tr>
-                <td align="left" class="header-table" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" class="logo-light" style="font-size:0px;padding:0;word-break:break-word;">
                   
-      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-        <tr>
-        <td style="width: 60%; vertical-align: middle;" class="header-logo">
-          <img src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo.png" width="226" style="display: block; max-width: 226px; height: auto;" alt>
-        </td>
-        <td style="width: 40%; vertical-align: middle; text-align: right; font-family: Arial, sans-serif; font-size: 13px; color: #2D2D2F;" class="header-text dark-text">
-          Connected & Engaged
-        </td>
-      </tr>
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style="width:226px;">
+              
+      <img alt src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo.svg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="226" height="auto">
+    
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+                </td>
+              </tr>
+            <!-- Dark mode logo (hidden in light mode) -->
+              <tr>
+                <td align="left" class="logo-dark" style="font-size:0px;padding:0;word-break:break-word;">
+                  
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style="width:226px;">
+              
+      <img alt src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo-inverted.svg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="226" height="auto">
+    
+            </td>
+          </tr>
+        </tbody>
       </table>
     
                 </td>
@@ -196,6 +259,29 @@
         </tbody>
       </table>
     
+      </div>
+    
+              <!--[if mso | IE]></td><td style="vertical-align:middle;width:214px;" ><![endif]-->
+                
+      <div class="mj-column-per-40 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:40%;">
+        
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:middle;" width="100%">
+        <tbody>
+          
+              <tr>
+                <td align="right" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                  
+      <div style="font-family: Arial, sans-serif;font-size:13px;line-height:1;text-align:right;color:#2D2D2F;">Connected & Engaged</div>
+    
+                </td>
+              </tr>
+            
+        </tbody>
+      </table>
+    
+      </div>
+    
+              <!--[if mso | IE]></td></tr></table><![endif]-->
       </div>
     
           <!--[if mso | IE]></td></tr></table><![endif]-->
@@ -209,10 +295,10 @@
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
         <!-- Hero Section -->
-          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:560px;" width="560" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:560px;">
         
         <!--[if gte mso 9]>
 <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
@@ -226,8 +312,8 @@
 <![endif]-->
           <tbody>
             <tr>
-              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:576px;" ><![endif]-->
+              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;" class="article-outer">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:536px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
@@ -237,7 +323,7 @@
               <tr>
                 <td align="center" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                   
-      <div style="font-family: Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.2;text-align:center;color:#2D2D2F;">Top Digital Moments You Shouldn't Miss</div>
+      <div style="font-family: Arial, sans-serif;font-size:50px;font-weight:700;line-height:1.2;text-align:center;color:#2D2D2F;">Top Digital Moments You Shouldn't Miss</div>
     
                 </td>
               </tr>
@@ -258,10 +344,10 @@
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
         <!-- Article Section -->
-          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:560px;" width="560" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:560px;">
         
         <!--[if gte mso 9]>
 <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
@@ -275,25 +361,21 @@
 <![endif]-->
           <tbody>
             <tr>
-              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:32px;text-align:center;">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="dark-bg-outlook" style="vertical-align:top;width:528px;" ><![endif]-->
+              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;" class="article-outer">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="dark-bg-outlook" style="vertical-align:top;width:536px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix dark-bg" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
-      <!--[if gte mso 9]>
-<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
-<v:fill type="tile" color="#E4E7DB" />
-<v:textbox inset="0,0,0,0">
-<![endif]-->
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#E4E7DB;vertical-align:top;" width="100%">
-<!--[if gte mso 9]>
-</v:textbox>
-</v:rect>
-<![endif]-->
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tbody>
+          <tr>
+            <td style="background-color:#E4E7DB;vertical-align:top;padding:8px;" class="article-inner">
+              
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
         <tbody>
           
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:18px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:32px;line-height:1.4;text-align:left;color:#2D2D2F;">&#x1F47E; Game On: JUICY vs. BOUNCY [REFRESH TEST nttsratrsgmtn grtnisraeniti]</div>
     
@@ -301,14 +383,14 @@
               </tr>
             
               <tr>
-                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="center" style="font-size:0px;padding:0 0 20px 0;word-break:break-word;">
                   
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
         <tbody>
           <tr>
-            <td style="width:478px;">
+            <td style="width:520px;">
               
-      <img alt="JUICY vs. BOUNCY" src="https://s1.designmodo.com/postcards/essence-jelly-vs-bouncy-game-background-0825_2-185656c0.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="478" height="auto">
+      <img alt="JUICY vs. BOUNCY" src="https://s1.designmodo.com/postcards/essence-jelly-vs-bouncy-game-background-0825_2-185656c0.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="520" height="auto">
     
             </td>
           </tr>
@@ -319,7 +401,25 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
+                  
+      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+        <tr>
+    <td style="width: 50px; vertical-align: middle; padding: 0;">
+      <img src="https://www.online-image-editor.com//styles/2014/images/example_image.png" width="32" style="display: block; width: 32px; height: 32px; border-radius: 100px;" alt>
+    </td>
+    <td style="vertical-align: middle; text-align: left; padding: 0 0 0 8px;">
+      <div style="font-family: Arial, sans-serif; font-size: 12px; color: #2D2D2F; line-height: 140%;" class="dark-text">For more information, please contact</div>
+      <div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; color: #2D2D2F; line-height: 140%; padding-top: 4px;" class="dark-text">Stephane Goeuriot</div>
+    </td>
+  </tr>
+      </table>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">Our latest campaign btrstarrings not only color but also action: Juicy vs. Bouncy! On our
       microsite you'll find an interactive Pong-inspired mini game designed to engage our Gen Z
@@ -329,7 +429,7 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">Choose your team, test your skills, and decide who takes the crown in the end</div>
     
@@ -337,7 +437,7 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">&#x1F449; Play now:
       <a href="https://example.com/juicy-vs-bouncy" style="color: #2D2D2F;">JUICY vs. BOUNCY</a></div>
@@ -345,6 +445,11 @@
                 </td>
               </tr>
             
+        </tbody>
+      </table>
+    
+            </td>
+          </tr>
         </tbody>
       </table>
     
@@ -361,10 +466,10 @@
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
         <!-- Article Section -->
-          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:560px;" width="560" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:560px;">
         
         <!--[if gte mso 9]>
 <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
@@ -378,25 +483,21 @@
 <![endif]-->
           <tbody>
             <tr>
-              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:32px;text-align:center;">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="dark-bg-outlook" style="vertical-align:top;width:528px;" ><![endif]-->
+              <td style="border:4px solid #2D2D2F;border-bottom:0;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;" class="article-outer">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="dark-bg-outlook" style="vertical-align:top;width:536px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix dark-bg" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
-      <!--[if gte mso 9]>
-<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
-<v:fill type="tile" color="#E4E7DB" />
-<v:textbox inset="0,0,0,0">
-<![endif]-->
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#E4E7DB;vertical-align:top;" width="100%">
-<!--[if gte mso 9]>
-</v:textbox>
-</v:rect>
-<![endif]-->
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tbody>
+          <tr>
+            <td style="background-color:#E4E7DB;vertical-align:top;padding:8px;" class="article-inner">
+              
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
         <tbody>
           
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:18px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:32px;line-height:1.4;text-align:left;color:#2D2D2F;">&#x1F47E; Game On: JUICY vs. BOUNCY [REFRESH TEST nttsratrsgmtn grtnisraeniti]</div>
     
@@ -404,14 +505,14 @@
               </tr>
             
               <tr>
-                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="center" style="font-size:0px;padding:0 0 20px 0;word-break:break-word;">
                   
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
         <tbody>
           <tr>
-            <td style="width:478px;">
+            <td style="width:520px;">
               
-      <img alt="JUICY vs. BOUNCY" src="https://s1.designmodo.com/postcards/essence-jelly-vs-bouncy-game-background-0825_2-185656c0.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="478" height="auto">
+      <img alt="JUICY vs. BOUNCY" src="https://s1.designmodo.com/postcards/essence-jelly-vs-bouncy-game-background-0825_2-185656c0.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="520" height="auto">
     
             </td>
           </tr>
@@ -422,7 +523,25 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" style="font-size:0px;padding:0 0 15px 0;word-break:break-word;">
+                  
+      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
+        <tr>
+    <td style="width: 50px; vertical-align: middle; padding: 0;">
+      <img src="https://www.online-image-editor.com//styles/2014/images/example_image.png" width="32" style="display: block; width: 32px; height: 32px; border-radius: 100px;" alt>
+    </td>
+    <td style="vertical-align: middle; text-align: left; padding: 0 0 0 8px;">
+      <div style="font-family: Arial, sans-serif; font-size: 12px; color: #2D2D2F; line-height: 140%;" class="dark-text">For more information, please contact</div>
+      <div style="font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; color: #2D2D2F; line-height: 140%; padding-top: 4px;" class="dark-text">Stephane Goeuriot</div>
+    </td>
+  </tr>
+      </table>
+    
+                </td>
+              </tr>
+            
+              <tr>
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">Our latest campaign btrstarrings not only color but also action: Juicy vs. Bouncy! On our
       microsite you'll find an interactive Pong-inspired mini game designed to engage our Gen Z
@@ -432,7 +551,7 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">Choose your team, test your skills, and decide who takes the crown in the end</div>
     
@@ -440,7 +559,7 @@
               </tr>
             
               <tr>
-                <td align="left" class="dark-text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                <td align="left" class="dark-text" style="font-size:0px;padding:0;word-break:break-word;">
                   
       <div style="font-family: Arial, sans-serif;font-size:16px;line-height:1.4;text-align:left;color:#2D2D2F;">&#x1F449; Play now:
       <a href="https://example.com/juicy-vs-bouncy" style="color: #2D2D2F;">JUICY vs. BOUNCY</a></div>
@@ -448,6 +567,11 @@
                 </td>
               </tr>
             
+        </tbody>
+      </table>
+    
+            </td>
+          </tr>
         </tbody>
       </table>
     
@@ -464,10 +588,10 @@
       
       <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
         <!-- Footer -->
-          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <!--[if mso | IE]><tr><td class="dark-bg-outlook dark-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="dark-bg-outlook dark-border-outlook" role="presentation" style="width:560px;" width="560" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <div class="dark-bg dark-border" style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:560px;">
         
         <!--[if gte mso 9]>
 <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
@@ -481,8 +605,8 @@
 <![endif]-->
           <tbody>
             <tr>
-              <td style="border:4px solid #2D2D2F;border-bottom:4px solid #2D2D2F;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:576px;" ><![endif]-->
+              <td style="border:4px solid #2D2D2F;direction:ltr;font-size:0px;line-height:0;padding:8px;text-align:center;" class="article-outer">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:536px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
@@ -528,3 +652,7 @@
   </body>
 </html>
   
+
+------Alternative_1761117014705_3--
+------Related_1761117014705_2--
+------Mixed_1761117014705_1--

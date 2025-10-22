@@ -50,7 +50,8 @@
       "keepComments": false,
       "beautify": true,
       "minify": false,
-      "validationLevel": "strict"
+      "validationLevel": "strict",
+      "breakpoint": "620px"
     }
   }
 }

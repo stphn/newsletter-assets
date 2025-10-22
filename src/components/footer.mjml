@@ -1,6 +1,6 @@
 <!-- Footer -->
-<mj-section mj-class="sections footer" css-class="dark-bg dark-border">
+<mj-section mj-class="footer" css-class="dark-bg dark-border">
   <mj-column>
-    <mj-text css-class="dark-text"> DIGITAL MARKETING & EXPERIENCES </mj-text>
+    <mj-text css-class="dark-text">DIGITAL MARKETING & EXPERIENCES</mj-text>
   </mj-column>
 </mj-section>
