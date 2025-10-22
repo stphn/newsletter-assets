@@ -1,26 +1,16 @@
 <!-- Header -->
-<mj-section background-color="#F8FAF3" mj-class="section-border" padding="8px" css-class="dark-bg dark-border">
+<mj-section background-color="#F8FAF3" border="4px solid #2D2D2F" padding="8px">
   <mj-group>
     <mj-column width="60%" vertical-align="middle">
-      <!-- Light mode logo (hidden in dark mode) -->
       <mj-image
         align="left"
         width="226px"
         padding="0"
         src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo.svg"
-        css-class="logo-light"
-      />
-      <!-- Dark mode logo (hidden in light mode) -->
-      <mj-image
-        align="left"
-        width="226px"
-        padding="0"
-        src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo-inverted.svg"
-        css-class="logo-dark"
       />
     </mj-column>
     <mj-column width="40%" vertical-align="middle">
-      <mj-text align="right" padding="10px 25px" css-class="dark-text">Connected & Engaged</mj-text>
+      <mj-text align="right">Connected & Engaged</mj-text>
     </mj-column>
   </mj-group>
 </mj-section>

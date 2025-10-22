@@ -1,6 +1,15 @@
 <!-- Footer -->
-<mj-section mj-class="footer" css-class="dark-bg dark-border">
+<mj-section mj-class="footer" padding-bottom="30px">
   <mj-column>
-    <mj-text css-class="dark-text">DIGITAL MARKETING & EXPERIENCES</mj-text>
+    <mj-divider padding="20px 0" border-width="1px" border-color="lightgrey" />
+    <mj-image
+      align="left"
+      width="118px"
+      padding="8px 0"
+      src="https://raw.githubusercontent.com/stphn/newsletter-assets/main/assets/logo.svg"
+    />
+
+    <mj-text padding="8px 0">DIGITA L MARKETING & EXPERIENCES</mj-text>
+    <mj-text padding="0">Cosnova GmbH Am Limespark 2 65843 Sulzbach / TS, Germany</mj-text>
   </mj-column>
 </mj-section>

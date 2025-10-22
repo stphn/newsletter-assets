@@ -1,11 +1,33 @@
-<mj-table padding="0 0 15px 0">
+<mj-table padding="0 0 12px 0">
   <tr>
-    <td style="width: 50px; vertical-align: middle; padding: 0;">
-      <img src="https://www.online-image-editor.com//styles/2014/images/example_image.png" width="32" style="display: block; width: 32px; height: 32px; border-radius: 100px;" alt="">
+    <td style="width: 40px; vertical-align: middle; padding: 0">
+      <img src="https://www.online-image-editor.com//styles/2014/images/example_image.png" width="32" style="
+          border: 1px solid #2d2d2f;
+          display: block;
+          width: 32px;
+          height: 32px;
+          border-radius: 100px;
+        " alt="" />
     </td>
-    <td style="vertical-align: middle; text-align: left; padding: 0 0 0 8px;">
-      <div style="font-family: Montserrat, Arial, sans-serif; font-size: 12px; color: #2D2D2F; line-height: 140%;" class="dark-text">For more information, please contact</div>
-      <div style="font-family: Montserrat, Arial, sans-serif; font-size: 14px; font-weight: 700; color: #2D2D2F; line-height: 140%; padding-top: 4px;" class="dark-text">Stephane Goeuriot</div>
+    <td style="vertical-align: middle; text-align: left; padding: 0 0 0 5px">
+      <div style="
+          font-family: Montserrat, Arial, sans-serif;
+          font-size: 12px;
+          color: #2d2d2f;
+          line-height: 140%;
+        ">
+        For more information, please contact
+      </div>
+      <div style="
+          font-family: Montserrat, Arial, sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          color: #2d2d2f;
+          line-height: 140%;
+          padding-top: 4px;
+        ">
+        Stephane Goeuriot
+      </div>
     </td>
   </tr>
 </mj-table>

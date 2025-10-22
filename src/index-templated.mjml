@@ -9,8 +9,8 @@
     <mj-wrapper padding="20px" css-class="main-wrapper">
       <mj-include path="./components/header.mjml" />
       <mj-include path="./components/hero.mjml" />
-      <mj-include path="./components/article.mjml" />
-      <mj-include path="./components/article.mjml" />
+      <mj-include path="./components/article-1.mjml" />
+      <mj-include path="./components/article-2.mjml" />
       <mj-include path="./components/footer.mjml" />
     </mj-wrapper>
   </mj-body>

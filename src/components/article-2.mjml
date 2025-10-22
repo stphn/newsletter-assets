@@ -1,0 +1,22 @@
+<!-- Article Section -->
+<mj-section mj-class="section-border" padding="8px 8px 40px 8px">
+  <mj-column background-color="#E4E7DB" padding="8px">
+    <mj-text mj-class="headline" font-weight="500" padding="8px 0 18px 0">
+      Article Title 2
+    </mj-text>
+    <mj-image alt="Article 2"
+      src="https://via.placeholder.com/600x400"
+      padding="0 0 20px 0" />
+    <mj-include path="./person.mjml" />
+    <mj-text mj-class="body-text" padding="0">
+      This is the content for article 2. Replace this with your actual article content.
+    </mj-text>
+    <mj-text mj-class="body-text" padding="0">
+      Add more paragraphs as needed to describe your article.
+    </mj-text>
+    <mj-text mj-class="body-text" padding="0">
+      👉 Learn more:
+      <a href="https://example.com/article-2">Read Article</a>
+    </mj-text>
+  </mj-column>
+</mj-section>

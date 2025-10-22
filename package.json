@@ -13,7 +13,8 @@
     "export:html": "node scripts/export-html.js",
     "export:outlook": "node scripts/export-outlook.js",
     "export:tar": "node scripts/export-tar.js",
-    "export:all": "pnpm run build:mjml && pnpm run export:html && pnpm run export:outlook && pnpm run export:tar"
+    "export:all": "pnpm run build:mjml && pnpm run export:html && pnpm run export:outlook && pnpm run export:tar",
+    "process-images": "node scripts/process-images.js"
   },
   "dependencies": {
     "mjml": "^4.15.3"
